@@ -1,36 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Pessoal</title>
     <link rel="stylesheet" href="./style.css">
-    <title>Portifolio LF</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="#">
-                    <img src="./components/img/icon__1_-removebg-preview (1).png" alt="">
-                </a>
-            </div>
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Especialidades</a></li>                 
-                </ul>
+    <header class="header">
+        <a href="#home" class="logo">Luis 
+        <span>Fernando</span></a>
 
-            </nav>
-            <div class="btn-contato">
-                <a href="#">
-                    <button>
-                        Contato
-                    </button>
-                </a>
-            </div>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Inicio</a>
+            <a href="#about">Sobre</a>
+            <a href="#service">Servicos</a>
+            <a href="#contact">Contato</a>
+
+        </nav>
+    </header>   
+    
+    <section class="home" id="home">
+
+        <div class="home-img">
+            <img src="./components/img/image.jpg" alt="">
         </div>
-    </header>
+
+        <div class="home-content">
+            <h1>It's <span>Luis</span></h1>
+            <h3 class="text-animation">
+                I'm a <span></span>
+            </h3>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur assumenda facere exercitationem excepturi labore, facilis esse sit. Quos mollitia harum esse nisi exercitationem expedita facilis odio ab, assumenda eius libero.</p>
+
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="#"><i class='bx bxl-github' ></i></a>
+            </div>
+
+            <a href="#" class="btn">Hire Me</a>
+        </div>
+        
+    </section>
+
+    <script> src="./script.js"</script>
 </body>
 </html>
