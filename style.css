@@ -247,8 +247,10 @@ span {
 }
 
 .about-img {
-    width: 600px; /* Define o tamanho do container da imagem */
-    height: 200px;/* Define o tamanho do container da imagem */
+    width: 50vw; /* Define o tamanho do container como 50% da largura da viewport */
+    height: 50vw; /* Define a altura do container como 50% da largura da viewport */
+    max-width: 300px; /* Define o tamanho máximo do container */
+    max-height: 300px; 
     overflow: hidden; /* Garante que a imagem se ajuste ao container */
     border-radius: 50%; /* Torna o container circular */
     box-shadow: 0 0 25px var(--main-color);
@@ -259,15 +261,20 @@ span {
     width: 100%; /* Garante que a imagem ocupe todo o container */
     height: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
     object-fit: cover; 
-    cursor: pointer;
 }
 
 .about-img:hover{
     box-shadow: 0 0 50px var(--main-color),
                 0 0 100px var(--main-color);
 }
+
+@media (max-width: 600px) {
+    .about-img {
+      width: 80vw; /* Ajusta o tamanho do container para 80% da largura da viewport em telas menores */
+      height: 80vw; /* Ajusta a altura do container para 80% da largura da viewport em telas menores */
+    }
+  }
 
 .heading{
     text-align: center;
@@ -298,12 +305,19 @@ span {
 
 ::-webkit-scrollbar-track{
     background-color: var(--bg-color);
-    width: 10%;
+    width: 50px;
 }
 
+.servicos{
+    margin: 20px;
+    text-align: center;
+    font-size: 8rem;
+}
 .services{
-    background-color: var(--bg-color);
-    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
 }
 
 .services h2{
@@ -311,9 +325,76 @@ span {
     color: #fff;
 }
 
-.services-container{
-    display: inline-block;
-    grid-template-columns: repeat(3,1fr);
-    align-items: center;
-    gap: 2.5rem;
+.services-box{
+    background-color: var(--main-color);
+    color: #000;
+    height: 250px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.services-box:hover{
+    background: rgb(0, 0, 0);
+    color: var(--main-color);
+    transform: scale(1.03);
+}
+
+.services-box .services-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5rem;
+}
+
+.services-info h4{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.services-info p{
+    font-size: 1.6rem;
+}
+
+.contact{
+    background-color: var(--second-bg-color);
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
 }
