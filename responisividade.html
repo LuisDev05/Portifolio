@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo - Duas Colunas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .coluna {
+            width: 48%;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .coluna {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="coluna">
+        <h2>Coluna 1</h2>
+        <p>Coluna 01 - apresenta conteúdo aqui.</p>
+    </div>
+
+    <div class="coluna">
+        <h2>Coluna 2</h2>
+        <p>Coluna 02 - apresenta conteúdo aqui.</p>
+    </div>
+</div>
+
+</body>
+</html>
