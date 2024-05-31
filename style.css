@@ -129,7 +129,6 @@ span {
     width: 100%; /* Garante que a imagem ocupe todo o container */
     height: 100%; 
     object-fit: cover; 
-    cursor: pointer;
 }
 
 .home-img:hover{
@@ -185,49 +184,84 @@ span {
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.text-animation h1 {
-    overflow: hidden;
-    /* Ensures the content is hidden until revealed */
-    border-right: .15em solid var(--main-color);
-    /* Cursor effect */
-    white-space: nowrap;
-    /* Prevents text from wrapping */
-    margin: 0 auto;
-    /* Keeps the element centered */
-    letter-spacing: .10em;
-    /* Adds some space between letters */
-    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end 6, cursor-fade 1s forwards 4.5s;
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before{
+    content: 'Web Developer';
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+   to{
+    border-left: 2px solid var(--main-color);
+   }
+}
+
+@keyframes words {
+    0%,
+    20%{
+        content: 'Web Developer';
+    }
+    21%,
+    40%{
+        content: 'Front End';
+    }
+    41%,
+    60%{
+        content: 'UI / UX Designer';
+    }
+    61%,
+    80%{
+        content: 'Content Manager';
+    }
+    81%,
+    100%{
+        content: 'Software Tester';
+    }
 }
 
 @keyframes typing {
-    from {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    90%,
+    95%{
         width: 0;
     }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: rgb(0, 213, 255);
-    }
-}
-
-@keyframes cursor-fade {
-    from {
-        border-right-color: var(--main-color);
-    }
-
-    to {
-        border-right-color: transparent;
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
     }
 }
 
@@ -254,13 +288,14 @@ span {
     border-radius: 50%; /* Torna o container circular */
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
+    
 }
 
 .about-img img {
     width: 100%; /* Garante que a imagem ocupe todo o container */
     height: 100%;
-    border-radius: 50%;
     object-fit: cover; 
+   
 }
 
 .about-img:hover{
@@ -300,16 +335,9 @@ span {
     width: 50px;
 }
 
-.servicos{
-    margin: 20px;
-    text-align: center;
-    font-size: 8rem;
-}
 .services{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-items: center;
-    gap: 2.5rem;
+    background-color: var(--bg-color);
+    color: #fff;
 }
 
 .services h2{
@@ -317,10 +345,18 @@ span {
     color: #fff;
 }
 
+.services{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
 .services-box{
     background-color: var(--main-color);
     color: #000;
     height: 250px;
+    margin-bottom: 20px;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -462,7 +498,8 @@ span {
     html{
         font-size: 55%;
     }
-    .services-container{
+    .services{
+        display: block;
         padding-bottom: 7rem;
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
@@ -499,7 +536,8 @@ span {
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        display: none;
+        
+        
     }
     .navbar.active{
         display: block;
@@ -526,7 +564,7 @@ span {
         margin: 0 auto;
     }
     .home-content img{
-        width: 56vw;
+        width: 52vw;
         margin-top: -2rem;
     }
     .about{
