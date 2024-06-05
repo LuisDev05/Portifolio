@@ -23,4 +23,4 @@ menulcon.onclick = () => {
     menulcon.classList.toggle('bx-x');
     navbar.classList('active')
 }
-    
+

@@ -220,23 +220,23 @@ span {
 @keyframes words {
     0%,
     20%{
-        content: 'Web Developer';
+        content: 'Fron End Developer';
     }
     21%,
     40%{
-        content: 'Front End';
+        content: 'Front End Developer';
     }
     41%,
     60%{
-        content: 'UI / UX Designer';
+        content: 'Front End Developer';
     }
     61%,
     80%{
-        content: 'Content Manager';
+        content: 'Front End Developer';
     }
     81%,
     100%{
-        content: 'Software Tester';
+        content: 'Front End Developer';
     }
 }
 
@@ -598,7 +598,7 @@ span {
     font-size: 18.5rem;
     border-radius: 50%;
     color: var(--main-color);
-    margin: 70px;
+    margin: 100px;
     transition: 0.3s ease-in-out;
 }
 
@@ -669,4 +669,25 @@ span {
     transform: scale(1.3) translateY(-5px);
     box-shadow: 0 0 25px #fffb00;
     background-color: var();
+}
+
+.light-mode{
+    width: 100px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.light-mode::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background:#fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
 }
