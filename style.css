@@ -104,15 +104,15 @@ span {
 }
 
 .home-content h3 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
     font-size: 3.5rem;
 }
 
 .home-content h1 {
-    font-size: 7rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     line-height: 1;
 }
 
@@ -136,11 +136,11 @@ span {
                 0 0 100px var(--main-color);
 }
 
-.home-content p {
-    font-size: 1.5rem;
+.home-content h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5.5rem;
     font-weight: 500;
     max-width: 1000px;
-    padding: 10px;
 }
 
 .social-icons a {
@@ -195,7 +195,7 @@ span {
 }
 
 .text-animation span::before{
-    content: 'Web Developer';
+    content: 'Fron End';
     color: var(--main-color);
     animation: words 20s infinite;
 }
@@ -220,23 +220,23 @@ span {
 @keyframes words {
     0%,
     20%{
-        content: 'Fron End Developer';
+        content: 'Desenvolvedor | Front End';
     }
     21%,
     40%{
-        content: 'Front End Developer';
+        content: 'Desenvolvedor | Front End';
     }
     41%,
     60%{
-        content: 'Front End Developer';
+        content: 'Desenvolvedor | Front End';
     }
     61%,
     80%{
-        content: 'Front End Developer';
+        content: 'Desenvolvedor | Front End';
     }
     81%,
     100%{
-        content: 'Front End Developer';
+        content: 'Desenvolvedor | Front End';
     }
 }
 
@@ -282,8 +282,8 @@ span {
 .about-img {
     width: 50vw; /* Define o tamanho do container como 50% da largura da viewport */
     height: 50vw; /* Define a altura do container como 50% da largura da viewport */
-    max-width: 300px; /* Define o tamanho máximo do container */
-    max-height: 300px; 
+    max-width: 200px; /* Define o tamanho máximo do container */
+    max-height: 200px; 
     overflow: hidden; /* Garante que a imagem se ajuste ao container */
     border-radius: 50%; /* Torna o container circular */
     box-shadow: 0 0 25px var(--main-color);
@@ -318,6 +318,7 @@ span {
 }
 
 .about-content p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
@@ -669,25 +670,4 @@ span {
     transform: scale(1.3) translateY(-5px);
     box-shadow: 0 0 25px #fffb00;
     background-color: var();
-}
-
-.light-mode{
-    width: 100px;
-    height: 40px;
-    border: 2px solid #fff;
-    border-radius: 60px;
-    position: relative;
-    cursor: pointer;
-}
-
-.light-mode::before{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background:#fff;
-    border-radius: 50%;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
 }
