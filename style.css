@@ -520,6 +520,9 @@ span {
     .services{
         padding-bottom: 7rem;
     }
+    .especialidades{
+        text-align: center;
+    }
     .footer{
         padding: 2rem 3;
     }
@@ -596,15 +599,19 @@ span {
     }
 }
 
+.especialidades h2{
+    font-size: 6rem;
+}
+
 .especialidades i {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 21.5rem;
-    height: 21.5rem;
+    width: 17rem;
+    height: 17rem;
     background: transparent;
     border: 0.2rem solid var(--main-color);
-    font-size: 18.5rem;
+    font-size: 13.5rem;
     border-radius: 50%;
     color: var(--main-color);
     margin: 100px;
@@ -615,8 +622,8 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 21.5rem;
-    height: 21.5rem;
+    width: 18.5rem;
+    height: 18.5rem;
     background: transparent;
     border: 0.2rem solid var(--main-color);
     font-size: 18.5rem;
