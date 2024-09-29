@@ -322,7 +322,7 @@ span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
-    text-align: justify;
+    text-align: start;
     letter-spacing: 0.1rem;
 }
 
@@ -358,6 +358,7 @@ span {
     transition: 8s;
     cursor: pointer;
     border-radius: 40px;
+    border: 3px solid rgb(97, 97, 97);
     position: relative;
 }
 
@@ -572,7 +573,7 @@ span {
     }
     .home-content h2{
         font-size: 4.5rem;
-        font-weight: 100;
+        font-weight: 400;
     }
     .home-content img{
         width: 52vw;
