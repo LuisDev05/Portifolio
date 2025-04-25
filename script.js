@@ -13,8 +13,8 @@ window.onscroll = () => {
     
         if(top >= offset && top < offset + height){
             navLinks.forEach(links => {
-                links.classList.renove('active');
-                document.querySelector('header nav a [href*=' + id +']').classList.add('active');
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             })
         }
     })
@@ -23,3 +23,16 @@ menulcon.onclick = () => {
     menulcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+const themeIcon = themeToggleBtn.querySelector('i');
+
+themeToggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    if(body.classList.contains('light-mode')) {
+        themeIcon.classList.replace('bx-moon', 'bx-sun');
+    } else {
+        themeIcon.classList.replace('bx-sun', 'bx-moon');
+    }
+});
