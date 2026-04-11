@@ -28,18 +28,25 @@
     backdrop-filter: blur(10px);
 }
 
-.light-mode .navbar a{
-    color: #000000;
+.light-mode .navbar {
+    background-color: #8a8888eb;
 }
 
+.light-mode .navbar a:hover{
+    color: #e6e6e6;
+     
+}
+
+
 .light-mode .social-icons a:hover{
-   color: #000000;
+    color: white;
+    background-color: #000000;
 }
 
 .light-mode .html5-icon:hover{
-    color: #000000;
+    color: #ff4800;
     border: #000000;
-    box-shadow: 0 0 25px #000000;
+    box-shadow: 0 0 25px #ff4800;
 }
 
 .light-mode .about{
@@ -55,6 +62,26 @@
 
 .light-mode .about p{
     color: #000000;
+}
+
+.light-mode .contact{
+    background-color: #f5f5f5;
+}
+
+.light-mode .contact h2{
+    color: #000000;
+}
+
+.light-mode .footer .social a:hover{
+    color: white;
+}
+
+.light-mode .footer ul li a{
+    color: black;
+}
+
+.light-mode .footer p{
+    color: black;
 }
 
 html {
@@ -260,23 +287,23 @@ span {
 @keyframes words {
     0%,
     20%{
-        content: 'Desenvolvedor | Front End';
+        content: 'Desenvolvedor | FullStack | Oracle PL/SQL';
     }
     21%,
     40%{
-        content: 'Desenvolvedor | Front End';
+        content: 'Desenvolvedor | FullStack | Oracle PL/SQL';
     }
     41%,
     60%{
-        content: 'Desenvolvedor | Front End';
+        content: 'Desenvolvedor | FullStack | Oracle PL/SQL';
     }
     61%,
     80%{
-        content: 'Desenvolvedor | Front End';
+        content: 'Desenvolvedor | FullStack | Oracle PL/SQL';
     }
     81%,
     100%{
-        content: 'Desenvolvedor | Front End';
+        content: 'Desenvolvedor | FullStack | Oracle PL/SQL';
     }
 }
 
@@ -727,10 +754,10 @@ span {
 }
 
 .javascript-icon:hover{
-    color: #fffb00;
+    color: #e0dc00;
     border:#fffb00;
     transform: scale(1.3) translateY(-5px);
-    box-shadow: 0 0 25px #fffb00;
+    box-shadow: 0 0 25px #969300;
     background-color: var();
 }
 
@@ -750,9 +777,22 @@ span {
 }
 
 .bxl-python:hover{
-    color: #00ff73;
-    border:#13d647;
+    color: #0ebcab;
+    border:#0f8790;
     transform: scale(1.3) translateY(-5px);
-    box-shadow: 0 0 25px #00fc3f;  
+    box-shadow: 0 0 25px #0ec3a2;  
 }
 
+.bxl-postgresql:hover{
+    color: rgb(19, 130, 167);
+    border: rgb(14, 104, 132);
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px rgb(0, 64, 85);
+}
+
+.bxl-java:hover{
+    color: #ff6200;
+    border: #ad0000;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px #871111;
+}
