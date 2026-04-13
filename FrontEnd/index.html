@@ -27,7 +27,7 @@
     <section class="home" id="home">
        
         <div class="home-img">
-            <img src="./components/img/luis.jpg" alt="">
+            <img src="./img/luis.jpg" alt="Luís Fernando">
         </div>
         
         <div class="home-content">
@@ -70,7 +70,7 @@
             <a href="#" class="btn"> Read More</a>
         </div>
         <div class="about-img">
-            <img src="./components/img/luis.jpg" alt="">
+            <img src="./img/luis.jpg" alt="Luís Fernando">
         </div>
     </section>
                     
@@ -79,15 +79,15 @@
             <h2 class="heading">Projetos</h2>
             <div class="flex">
 
-                <div class="img-port" style="background-image: url(./components/img/verdao.png);">
+                <div class="img-port" style="background-image: url(./img/verdao.png);">
                     <div class="overlay">Verdão</div>
                 </div>
 
-                <div class="img-port" style="background-image: url(./components/img/english.png);">
+                <div class="img-port" style="background-image: url(./img/english.png);">
                     <div class="overlay">Mentoria de Inglês</div>
                 </div>
 
-                <div class="img-port" style="background-image: url(./components/img/parallax.png);">
+                <div class="img-port" style="background-image: url(./img/parallax.png);">
                     <div class="overlay">Parallax</div>
                 </div>
         </div>
@@ -97,21 +97,24 @@
 
         <h2 class="heading">Contato</h2>
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Nome Completo">
-                <input type="email" placeholder="Email">
-            </div>
+        <form id="contact-form" enctype="multipart/form-data">
+    <div class="input-box">
+        <!-- O 'name' de cada input deve ser idêntico aos campos do ContactDTO -->
+        <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+    </div>
 
-            <div class="input-box">
-                <input type="number" placeholder="Numero de Telefone">
-                <input type="text" placeholder="Subject">
-            </div>
+    <div class="input-box">
+        <input type="text" id="assunto" name="assunto" placeholder="Assunto (Subject)" required>
+        <!-- Novo campo para envio de anexo (opcional, limitado a 5MB pelo backend) -->
+        <input type="file" id="arquivo" name="arquivo" accept="application/pdf, image/*">
+    </div>
 
-            <textarea name="" id="" cols="30" rows="10" 
-            placeholder="Sua Mensagem"></textarea>
-            <input type="submit" value="Send Mesage" class="btn">
-        </form>
+    <textarea name="mensagem" id="mensagem" cols="30" rows="10" 
+    placeholder="Sua Mensagem" required></textarea>
+    
+    <input type="submit" value="Send Message" class="btn">
+</form>
     </section>
 
     <footer class="footer">
